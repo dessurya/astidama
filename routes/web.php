@@ -15,6 +15,5 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function(){
-	return view('frontend.home-page.index');
-})->name('frontend.home');
+Route::get('/', 'Frontend\HomeController@index')
+	->name('frontend.home');

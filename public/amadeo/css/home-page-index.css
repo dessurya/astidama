@@ -6,8 +6,8 @@
 	}
 	a.my-btn{
 		padding: 5px 15px;
-		border: 1px solid rgb(0,0,0);
-		color: rgb(36,41,46);
+		border: 1px solid rgb(255,255,255);
+		color: rgb(255,255,255);
 		text-decoration: none;
 		text-transform: uppercase;
 	    font-family: 'Gotham-Book';
@@ -25,19 +25,21 @@
 	}
 	#navigasi #nav-wrapper{
 		position: relative;
-		width: auto;
+		width: 90%;
 		height: auto;
 		margin: 0 auto;
 		display: table;
+		text-align: center;
 	}
 	#navigasi #nav-wrapper .nav-content{
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
 		height: 75px;
+		width: 14.28%;
 	}
 	#navigasi #nav-wrapper .nav-content a{
-		margin: 0 15px;
+		/*margin: 0 15px;*/
 		text-decoration: none;
 		text-transform: uppercase;
 		color: rgb(255,255,255);
@@ -46,6 +48,9 @@
 	}
 	#navigasi #nav-wrapper .nav-content a.title img{
 		height: 45px;
+		text-align: center;
+		margin-left: 0;
+		margin-right: 15px;
 	}
 /* navigasi */
 
@@ -76,7 +81,7 @@
 	}
 	#banner #banner-bottom-content #border{
 		position: relative;
-		padding: 0px 0px;
+		padding: 15px 0px;
 		border: solid 3px rgb(255,255,255);
 		-webkit-border-image:-webkit-linear-gradient(white,transparent,transparent,white) 1;
 		-moz-border-image:-moz-linear-gradient(white,transparent,transparent,white) 1;
@@ -118,7 +123,7 @@
 	}
 	#banner #banner-bottom-content img.chevron{
 		margin-top: 60px;
-		height: 0;
+		height: auto;
 		visibility: hidden;
 		opacity: 0;
 		transition: all 4.51s;
@@ -142,15 +147,11 @@
 		background-repeat: no-repeat;
 	}
 	.style-one #bg-img .content{
-		float: left;
-		height: 100vh;
 		display: table;
-	}
-	.style-one #bg-img .content:nth-child(odd){
+		height: 100vh;
 		width: 60%;
-	}
-	.style-one #bg-img .content:nth-child(even){
-		width: 40%;
+		margin: 0 auto;
+		text-align: center;
 	}
 	.style-one #bg-img .content #midle{
 		display: table-cell;
@@ -164,16 +165,16 @@
 		text-align: center;
 	}
 	.style-one #bg-img .content #midle #centered h3{
-		color: rgb(21,26,32);
+		color: rgb(255,255,255);
 		text-transform: uppercase;
-		margin-top: 0;
+		margin-top: -40vh;
 		margin-bottom: 40px;
 		font-family: 'Gotham';
 	    font-style:italic;
 	    font-weight: lighter;
 	}
 	.style-one #bg-img .content #midle #centered p{
-		color: rgb(21,26,32);
+		color: rgb(255,255,255);
 		text-transform: uppercase;
 		margin-bottom: 40px;
 	    font-family: 'Gotham-Book';
@@ -182,13 +183,13 @@
 	.style-one #bg-img .content #midle #centered.animation-element-scroller{
 		visibility: hidden;
 		opacity: 0;
-		transform: translate(60%);
+		/*transform: translate(60%);*/
 		transition: all 2.51s;
 	}
 	.style-one #bg-img .content #midle #centered.animation-element-scroller.in-view{
 		visibility: visible;
 		opacity: 1;
-		transform: translate(0);
+		/*transform: translate(0);*/
 	}
 	/*animasi*/
 	.style-one #bg-img .content img#img-display{
@@ -210,328 +211,168 @@
 /* style-one */
 
 /* style-two */
-	.style-two .wrapper-display{
-		float: left;
-		height: 100vh;
-		margin: 0;
-		padding: 0;
+	.style-two{
+		background: rgb(0,0,0);
 	}
-	.style-two .wrapper-display:nth-child(odd){
-		width: 70%;
-	}
-	.style-two .wrapper-display:nth-child(even){
-		width: 30%;
-	}
-	.style-two .wrapper-display .bg-img{
-		width: 0%;
-		height: 0vh;
-	    background-size: contain;
-	    background-position: center 60%;
-		background-repeat: no-repeat;
-		visibility: hidden;
-		opacity: 0;
-		transition: all 2.51s;
-	}
-	.style-two .wrapper-display .bg-img.active{
-		height: 100vh;
-		width: 100%;
-		visibility: visible;
-		opacity: 1;
-	}
-	.style-two .wrapper-display .bg-img .content{
-		float: left;
-		width: 0%;
-		height: 0vh;
-		transition: all 2.51s;
-	}
-	.style-two .wrapper-display .bg-img.active .content{
-		width: 50%;
-		height: 100vh;
-	}
-	.style-two .wrapper-display .bg-img .content .img-display{
-	    margin-top: 0vh;
-	    height: 0vh;
-		transition: all 2.51s;
-	}
-	.style-two .wrapper-display .bg-img.active .content .img-display{
-		margin-top: 5vh;
-	    height: 95vh;	
-	}
-	.style-two .wrapper-display .bg-img .content .img-display.animation-element-scroller{
-		visibility: hidden;
-		opacity: 0;
-		transform: translate(0,20%);
-		transition: all 2.51s;
-	}
-	.style-two .wrapper-display .bg-img .content .img-display.animation-element-scroller.in-view{
-		visibility: visible;
-		opacity: 1;
-		transform: translate(0,0);
-		transition: all 2.51s;
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip{
-		margin-top: 0vh;
-		padding-right: 0%;
-		position: relative;
-	}
-	.style-two .wrapper-display .bg-img.active .content .content-decrip{
-		margin-top: 15vh;
-		padding-right: 20%;
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip h1.title{
-		text-transform: uppercase;
-		margin: 0;
-		color: rgb(124,127,138);
-		font-family: 'Gotham';
-	    font-style:italic;
-	    font-weight: lighter;
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip h1.title.animation-element-scroller{
-		visibility: hidden;
-		opacity: 0;
-		transform: translate(-80%);
-		transition: all 4.51s;
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip h1.title.animation-element-scroller.in-view{
-		visibility: visible;
-		opacity: 1;
-		transform: translate(0%);
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip .description{
-		margin-top: 10vh;
-		margin-bottom: 40px;
-		border-left: 1px solid rgb(0,0,0);
-		padding-left: 20px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip a.animation-element-scroller,
-	.style-two .wrapper-display .bg-img .content .content-decrip .description.animation-element-scroller{
-		visibility: hidden;
-		opacity: 0;
-		transform: scale(0);
-		transition: all 2.51s;
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip a.animation-element-scroller.in-view,
-	.style-two .wrapper-display .bg-img .content .content-decrip .description.animation-element-scroller.in-view{
-		visibility: visible;
-		opacity: 1;
-		transform: scale(1);
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip .description h2.name{
-		text-transform: uppercase;
-		margin: 0;
-		margin-bottom: 20px;
-		color: rgb(39,39,39);
-		font-family: 'Gotham-Black';
-	    font-style:italic;
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip .description p{
-		color: rgb(39,39,39);
-		font-family: 'Gotham';
-	    font-style:italic;
-	    font-weight: lighter;
-	}
-	.style-two .wrapper-display .bg-img .content .content-decrip a{
-		float: right;
-		text-transform: uppercase;
-		text-decoration: none;
-		color: rgb(39,39,39);
-		font-family: 'Gotham-Black';
-	    font-style:italic;
-	}
-	.style-two .wrapper-display .list-display{
+	.style-two #cover{
 		position: relative;
 		width: 100%;
-		height: 33.3vh;
-		background-color: rgb(226,226,226);
-		border-bottom: 1.5px solid rgba(204,204,204,1);
-		cursor: pointer;
-		transition: all .51s;
+		height: 100vh;
+		background: rgb(0,0,0);
+	    background: -webkit-linear-gradient(rgba(94,55,30,.6) 0%, rgb(0,0,0) 55%);
+	    background: -o-linear-gradient(rgba(94,55,30,.6) 0%, rgb(0,0,0) 55%);
+	    background: -moz-linear-gradient(rgba(94,55,30,.6) 0%, rgb(0,0,0) 55%);
+	    background: linear-gradient(rgba(94,55,30,.6) 0%, rgb(0,0,0) 55%);
 	}
-	.style-two .wrapper-display .list-display:hover,
-	.style-two .wrapper-display .list-display.active{
-		background-color: rgb(204,204,204);
-	}
-	.style-two .wrapper-display .list-display:last-child{
-		border-bottom: 1.5px solid rgba(186,186,186,0);	
-	}
-	.style-two .wrapper-display .list-display .midle{
-		display: table-cell;
-		vertical-align: middle;
-		height: 33vh;
-		width: 100vw;
-	}
-	.style-two .wrapper-display .list-display .midle .img-display{
-		width: 50px;
-		display: inline-block;
+	.style-two #cover .content{
+		position: relative;
+		width: 80%;
 		margin: 0 auto;
+		padding-top: 5vh;
+	}
+	.style-two #cover .content #collection-greating-wrapper{
+		position: relative;
+		width: 75%;
+		margin: 0 auto;
+	}
+	.style-two #cover .content #collection-greating-wrapper h1{
+		margin: 0 auto;
+		margin-bottom: 20px;
+		color: rgb(255,255,255);
+	    text-align: center;
+		text-transform: uppercase;
+		font-family: 'Gotham';
+	    font-style:italic;
+	    font-weight: lighter;
+	}
+	.style-two #cover .content #collection-greating-wrapper p{
+		color: rgb(255,255,255);
+	    text-align: center;
+	    font-family: 'Gotham';
+	    font-weight: lighter;
+	}
+	.style-two #cover .content #collection-list-item-wrapper{
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+	.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper{
+		width: 33%;
+		margin: 0 auto;
+		display: inline-grid;
+	}
+	.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display{
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 45vh;
+	}
+	.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display .item-content{
+		position: relative;
+		margin: 0 auto;
+		margin-top: 35vh;
+		width: 70%;
 		text-align: center;
-		visibility: hidden;
-		opacity: 0;
-		transition: all 1.51s;
 	}
-	.style-two .wrapper-display .list-display .midle .img-display.animation-element-scroller.in-view{
-		visibility: visible;
-		opacity: 1;
+	.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display .item-content h2{
+		margin-top: 0;
+		margin-bottom: 10px;
+		color: rgb(255,254,254);
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-family: 'Gotham';
+	    font-style:italic;
+	    font-weight: lighter;
 	}
-	.style-two .wrapper-display .list-display .midle label{
-		text-align: left;
-		padding: 0;
+	.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display .item-content p{
+		color: rgb(255,254,254);
+		text-align: center;
+		font-size: 10px;
+		font-family: 'Gotham';
+	    font-style:italic;
+	    font-weight: lighter;	
+	}
+	.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display .item-content a{
+		color: rgb(255,254,254);
+		text-align: center;
+		text-decoration: none;
+		font-size: 12px;
 		font-family: 'Gotham-Black';
-		font-style:italic;
-		visibility: hidden;
-		opacity: 0;
-		transition: all 3.51s;
-	}
-	.style-two .wrapper-display .list-display .midle label.animation-element-scroller.in-view{
-		visibility: visible;
-		opacity: 1;
+	    font-style:italic;
 	}
 /* style-two */
 
 /* style-three */
 	.style-three{
 		background-color: rgb(0,0,0);
+		padding-top: 5vh;
 	}
-	.style-three .list-recipe{
-		float: left;
-		position: relative;
-		width: 15%;
-		height: 100vh;
-		margin: 0;
-		padding: 0;
-		background-color: rgb(0,0,0);
-		overflow: hidden;
-		cursor: pointer;
-		border-right: 1px solid;
-		transition: all 4.51s;
+	.style-three hr#line{
+		text-align: center;
+		margin: 0 auto;
+		width: 30%;
 	}
-	.style-three .list-recipe .gradient{
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 100vh;
-		background: linear-gradient(
-			to right,
-			rgba(0,0,0,.5),
-			rgba(0,0,0,.5),
-			rgba(255,255,255,.47)
-		);
-		visibility: hidden;
-		opacity: 0;
-		transition: all 4.51s;
-	}
-	.style-three .list-recipe .gradient.animation-element-scroller.in-view{
-		visibility: visible;
-		opacity: 1;
-	}
-	.style-three .list-recipe h1.title{
+	.style-three h1#title{
+		margin: 0 auto;
+		margin-top: 40px;
+		margin-bottom: 60px;
+		color: rgb(255,255,255);
+	    text-align: center;
+		text-transform: uppercase;
 		font-family: 'Gotham';
 	    font-style:italic;
 	    font-weight: lighter;
-		color: rgb(255,255,255);
-		text-transform: uppercase;
-		text-align: left;
-		margin: auto;
-		position: absolute;
-		bottom: 40%;
-	    left: -105%;
-	    width: 250%;
-		-ms-transform: rotate(270deg);
-	    -webkit-transform: rotate(270deg);
-	    transform: rotate(270deg);
-	    visibility: hidden;
-	    opacity: 0;
-	    transition: all 4.51s;
 	}
-	.style-three .list-recipe h1.title.animation-element-scroller.in-view{
-		visibility: visible;
-	    opacity: 1;
+	.style-three #cocktails-list-recipe{
+		position: relative;
+		width: 80%;
+		margin: 0 auto;
 	}
-	.style-three .list-recipe p{
-		visibility: hidden;
-		opacity: 0;
+	.style-three #cocktails-list-recipe .list-recipe{
+		width: 24%;
+		margin: 0 auto;
+		display: inline-grid;
 	}
-	.style-three .list-recipe .bottom{
-		position: absolute;
-		bottom: 0;
+	.style-three #cocktails-list-recipe .list-recipe .img-display{
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center bottom;
 		width: 100%;
+		height: 45vh;
 	}
-	.style-three .list-recipe .bottom img.img-display{
-		position: relative;
-		height: 90vh;
-	    margin-left: 30%;
-	    visibility: hidden;
-	    opacity: 0;
-		transform: translate(-60%);
-	    transition: all 4.51s;
-	}
-	.style-three .list-recipe .bottom img.img-display.animation-element-scroller.in-view{
-		visibility: visible;
-	    opacity: 1;
-		transform: translate(0%);
-	}
-	.style-three .list-recipe.active{
-		width: 55%;
+	.style-three #cocktails-list-recipe .list-recipe h2{
+		margin-top: 0;
+		margin-bottom: 10px;
+		color: rgb(255,254,254);
 		text-align: center;
-		cursor: auto;
-	}
-	.style-three .list-recipe.active .gradient{
-		width: 0%;
-	}
-	.style-three .list-recipe.active h1.title{
-		position: relative;
-	    width: 100%;
-		bottom: 0;
-		left: 0;
-		text-align: center;
-		margin: 50px auto;
-		-ms-transform: rotate(0deg);
-	    -webkit-transform: rotate(0deg);
-	    transform: rotate(0deg);
-	}
-	.style-three .list-recipe.active p{
-		visibility: hidden;
-		opacity: 0;
-		text-align: center;
-		transition: all 4.51s;
-	}
-	.style-three .list-recipe.active p.animation-element-scroller.in-view{
-		visibility: visible;
-		opacity: 1;
-	}
-	.style-three .list-recipe.active p a{
-		padding: 10px 40px;
-		border: 1px solid rgb(255,255,255);
-		color: rgb(255,255,255);
-		text-decoration: none;
 		text-transform: uppercase;
+		font-size: 20px;
+		font-family: 'Gotham-Black';
+	    font-style:italic;
 	}
-	.style-three .list-recipe.active .bottom{
+	.style-three #see-all-btn{
+		margin-top: 40px;
 		text-align: center;
-	}
-	.style-three .list-recipe.active img.img-display{
-		height: 70vh;
-	    margin-left: 0%;
 	}
 /* style-three */
 
 /* event aticel */
-	#event-articel #bg-img{
+	#event-articel #bg{
 		position: relative;
 		width: 100%;
 		height: 100vh;
 		margin: 0;
 		padding: 0;
-		background-attachment: fixed;
-		background-position: 100% 225%;
-		background-size: contain;
-		background-repeat: no-repeat;
+		background-color: rgb(0,0,0);
 	}
-	#event-articel #bg-img h1#title{
+	#event-articel #bg h1#title{
 		padding-top: 90px;
+		margin: 0 auto;
 		margin-bottom: 90px;
+		color: rgb(255,254,254);
 		text-align: center;
 		text-transform: uppercase;
 		font-family: 'Gotham';
@@ -544,22 +385,22 @@
 	    transform: rotateX(150deg);
 	    transition: all 4.51s;
 	}
-	#event-articel #bg-img h1#title.animation-element-scroller.in-view{
+	#event-articel #bg h1#title.animation-element-scroller.in-view{
 	    visibility: visible;
 		opacity: 1;
 		-webkit-transform: rotateY(0deg);
 	    -moz-transform: rotateY(0deg);
 	    transform: rotateY(0deg);
 	}
-	#event-articel #bg-img #owl-news-articel{
+	#event-articel #bg #owl-news-articel{
 		position: relative;
 		width: 80%;
 		margin: 0 auto;
 	}
-	#event-articel #bg-img #owl-news-articel .item{
+	#event-articel #bg #owl-news-articel .item{
 		padding: 0 25px;
 	}
-	#event-articel #bg-img #owl-news-articel .bg-img{
+	#event-articel #bg #owl-news-articel .bg-img{
 		height: 50vh;
 		width: 100%;
 		background-position: center;
@@ -567,58 +408,62 @@
 		background-repeat: no-repeat;
 		position: relative;
 	}
-	#event-articel #bg-img #owl-news-articel .bg-img .wrapper-screen{
+	#event-articel #bg #owl-news-articel .bg-img .wrapper-screen{
 		position: absolute;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0,0,0,.6);
 	}
-	#event-articel #bg-img #owl-news-articel .bg-img .wrapper-title{
+	#event-articel #bg #owl-news-articel .bg-img .wrapper-title{
 		position: absolute;
 		bottom: 0;
 		width: 100%;
 		padding: 0 20px;
 	}
-	#event-articel #bg-img #owl-news-articel .bg-img .wrapper-title p{
+	#event-articel #bg #owl-news-articel .bg-img .wrapper-title p{
 		color: rgb(255,255,255);
 	    font-family: 'Gotham';
 	    font-weight: lighter;
 	}
-	#event-articel #bg-img #owl-news-articel .bg-img .wrapper-title h4{
+	#event-articel #bg #owl-news-articel .bg-img .wrapper-title h4{
 		color: rgb(255,255,255);
 		font-family: 'Gotham-Black';
 		font-style:italic;
 	}
-	#event-articel #bg-img #owl-news-articel .owl-controls{
+	#event-articel #bg #owl-news-articel .owl-controls{
 		position: absolute;
 		width: 100%;
 		top: 18vh;
 	}
-	#event-articel #bg-img #owl-news-articel .owl-controls .owl-buttons{
+	#event-articel #bg #owl-news-articel .owl-controls .owl-buttons{
 		position: relative;
 	}
-	#event-articel #bg-img #owl-news-articel .owl-controls .owl-buttons .owl-prev{
+	#event-articel #bg #owl-news-articel .owl-controls .owl-buttons .owl-prev{
 		position: absolute;
 		float: left;
 		background-color: rgba(0,0,0,0);
 		left: 50%;
+		transform: rotate(0deg);
 		transition: all 6.51s;
 	}
-	#event-articel #bg-img #owl-news-articel.animation-element-scroller.in-view .owl-controls .owl-buttons .owl-prev{
+	#event-articel #bg #owl-news-articel.animation-element-scroller.in-view .owl-controls .owl-buttons .owl-prev{
 		left: -90px;
+		transform: rotate(-630deg);
 	}
-	#event-articel #bg-img #owl-news-articel .owl-controls .owl-buttons .owl-next{
+	#event-articel #bg #owl-news-articel .owl-controls .owl-buttons .owl-next{
 		position: absolute;
 		float: right;
 		background-color: rgba(0,0,0,0);
 		right: 50%;
+		transform: rotate(0deg);
 		transition: all 6.51s;
 	}
-	#event-articel #bg-img #owl-news-articel.animation-element-scroller.in-view .owl-controls .owl-buttons .owl-next{
+	#event-articel #bg #owl-news-articel.animation-element-scroller.in-view .owl-controls .owl-buttons .owl-next{
 		right: -90px;
+		transform: rotate(630deg);
 	}
-	#event-articel #bg-img p#all-news-articel{
+	#event-articel #bg p#all-news-articel{
 		text-align: center;
 		margin-top: 10vh;
 	}
@@ -626,7 +471,16 @@
 
 /* footer*/
 	#footer{
-		background-color: rgb(115,118,130);
+		background-color: rgb(0,0,0);
+	}
+	#footer #bg{
+		position: relative;
+		width: 100%;
+		background: rgb(0,0,0);
+	    background: -webkit-linear-gradient(rgb(94,55,30) 0%, rgb(0,0,0) 100%);
+	    background: -o-linear-gradient(rgb(94,55,30) 0%, rgb(0,0,0) 100%);
+	    background: -moz-linear-gradient(rgb(94,55,30) 0%, rgb(0,0,0) 100%);
+	    background: linear-gradient(rgb(94,55,30) 0%, rgb(0,0,0) 100%);
 	}
 	#footer.setup-wrapper{
 		height: auto;

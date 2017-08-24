@@ -1,5 +1,33 @@
 // collection
-	
+	$(".collection.list-display").click(function(){
+	    var target = '#'+$(this).data('target')+'.collection.bg-img';
+
+		if ( $('.collection.list-display').hasClass("active") ){
+	        $('.collection.list-display').removeClass("active");
+	    }
+
+	    $(this).addClass("active");
+
+	    if ( $('.collection.bg-img').hasClass("active") ){
+	        $('.collection.bg-img').removeClass("active");
+
+	        $('.collection.bg-img .content .img-display.animation-element-scroller').removeClass("in-view");
+	        $('.collection.bg-img .content .content-decrip h1.title.animation-element-scroller').removeClass("in-view");
+	        $('.collection.bg-img .content .content-decrip a.animation-element-scroller').removeClass("in-view");
+	        $('.collection.bg-img .content .content-decrip .description.animation-element-scroller').removeClass("in-view");
+	    }
+
+        $(target).addClass("active");
+        var inOne 	= '#'+$(this).data('target')+'.collection.bg-img .content .img-display.animation-element-scroller';
+        var inTwo 	= '#'+$(this).data('target')+'.collection.bg-img .content .content-decrip h1.title.animation-element-scroller';
+        var inThree = '#'+$(this).data('target')+'.collection.bg-img .content .content-decrip a.animation-element-scroller';
+        var inFour 	= '#'+$(this).data('target')+'.collection.bg-img .content .content-decrip .description.animation-element-scroller';
+
+        $(inOne).addClass("in-view");
+        $(inTwo).addClass("in-view");
+        $(inThree).addClass("in-view");
+        $(inFour).addClass("in-view");
+	});
 // collection
 
 // recipe
@@ -21,7 +49,7 @@
 	    	paginationSpeed : 400,
 	    	pagination: false,
 	    	singleItem:false,
-		    navigationText : ["<img src='amadeo/image/chevron-down.png'>","<img src='amadeo/image/chevron-down.png'>"]
+		    navigationText : ["<img src='amadeo/image/chefron-black-left.png'>","<img src='amadeo/image/chefron-black-right.png'>"]
 	 
 	  	});
 	})
