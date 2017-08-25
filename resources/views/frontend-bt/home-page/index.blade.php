@@ -1,4 +1,4 @@
-@extends('frontend._layout.basic')
+@extends('frontend-bt._layout.basic')
 
 @section('head-title')
 <title>Astidama</title>
@@ -11,7 +11,7 @@
 	<link 
 		rel="stylesheet" 
 		type="text/css" 
-		href="{{ asset('amadeo/css/home-page-index.css') }}"
+		href="{{ asset('amadeo/css-bt/home-page-index.css') }}"
 	>
 	<link 
 		rel="stylesheet" 
@@ -28,23 +28,37 @@
 @section('body-content')
 	<div id="navigasi">
 		<div id="nav-wrapper">
-			@for($i=0; $i<=6; $i++)
-			<div class="nav-content">
-				<a href="{{ $NavTarget[$i] }}" class="{{ $i == 3 ? 'title' : '' }}" >
-				@if($i != 3)
-					{{ $navTitle[$i] }}
-				@elseif($i == 3)
-					<img src="{{ asset('amadeo/image/logo.png') }}">
-				@endif
-				</a>
-				
+			<div class="position left">
+				@for($i=0; $i<=2; $i++)
+				<div class="nav-content">
+					<a href="{{ $NavTarget[$i] }}">
+						{{ $navTitle[$i] }}
+					</a>
+				</div>
+				@endfor
 			</div>
-			@endfor
+			<div class="position right">
+				@for($i=4; $i<=6; $i++)
+				<div class="nav-content">
+					<a href="{{ $NavTarget[$i] }}">
+						{{ $navTitle[$i] }}
+					</a>
+				</div>
+				@endfor
+			</div>
+			<div class="position center">
+				<div class="nav-content title">
+					<a href="{{ $NavTarget[3] }}" class="title" >
+						<img src="{{ asset('amadeo/image/logo.png') }}">
+					</a>
+				</div>
+			</div>
+				
 		</div>
 	</div>
 
 	<div id="banner" class="setup-wrapper">
-		<div id="banner-img" style="background-image: url('{{ asset('amadeo/image/home-banner.jpg') }}');">
+		<div id="banner-img" class="animation-element-scroller" style="background-image: url('{{ asset('amadeo/image/home-banner.jpg') }}');">
 			<div id="banner-bottom-wrapper">
 				<div id="banner-bottom-content">
 					<div id="border" class="animation-element-scroller">
@@ -87,23 +101,23 @@
 		<div id="cover">
 			<div class="content">
 				<div id="collection-greating-wrapper">
-					<h1>our collection</h1>
-					<p>
+					<h1 class="animation-element-scroller">our collection</h1>
+					<p class="animation-element-scroller">
 						In the distillation process, there are 3 parts output; the “Head”, “Heart” and “Tail”. At Astidama Distillery only the “Heart”, the part which has between 63 and 72% of alcohol – the purest and the best of all will be casked.
 					</p>
 				</div>
 				<div id="collection-list-item-wrapper">
 					@for($a=0; $a<=2; $a++)
 					<div class="list-item-wrapper">
-						<div class="img-display" style="background-image: url('{{ asset('amadeo/image/'.$collectionPic[$a].'.png') }}');">
+						<div class="img-display animation-element-scroller" style="background-image: url('{{ asset('amadeo/image/'.$collectionPic[$a].'.png') }}');">
 							<div class="item-content">
 								<h2>{{ $collectionNama[$a] }}</h2>
 								<p>{{ $collectionDesc[$a] }}</p>
-								<a href="" class="animation-element-scroller">
+								<a href="">
 									LEARN MORE
 								</a>
 								<br>
-								<a href="" class="animation-element-scroller">
+								<a href="">
 									buy now
 								</a>
 							</div>
@@ -115,7 +129,7 @@
 		</div>
 	</div>
 
-	<div id="cocktails" class="style-three setup-wrapper">
+	<div id="cocktails" class="style-three setup-wrapper animation-element-scroller">
 		<hr id="line">
 		<h1 id="title">cocktail creation</h1>
 		<div id="cocktails-list-recipe">
@@ -123,16 +137,16 @@
 			<div class="list-recipe">
 				<div class="img-display" style="background-image: url('{{ asset('amadeo/image/'.$cocktailsImg[$i].'.png') }}');">
 				</div>
-				<h2 class="animation-element-scroller">{{ $cocktailsName[$i] }}</h2>
+				<h2>{{ $cocktailsName[$i] }}</h2>
 			</div>
 			@endfor
 		</div>
-		<div id="see-all-btn" class="animation-element-scroller">
+		<div id="see-all-btn">
 			<a href="" class="my-btn">see all recipe</a>
 		</div>
 	</div>
 
-	<div id="event-articel" class="setup-wrapper">
+	<div id="event-articel" class="setup-wrapper animation-element-scroller">
 		<div id="bg">
 			<h1 id="title" class="animation-element-scroller">events & article</h1>
 
@@ -236,5 +250,5 @@
 
 @section('footer-script')
 	<script src="{{ asset('plugin/owl-carousel/owl.carousel.js') }}"></script>
-	<script src="{{ asset('amadeo/js/home-page-index.js') }}"></script>
+	<script src="{{ asset('amadeo/js-bt/home-page-index.js') }}"></script>
 @endsection

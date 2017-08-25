@@ -1,4 +1,4 @@
-@extends('frontend._layout.basic')
+@extends('frontend-wt._layout.basic')
 
 @section('head-title')
 <title>Astidama</title>
@@ -11,7 +11,7 @@
 	<link 
 		rel="stylesheet" 
 		type="text/css" 
-		href="{{ asset('amadeo/css/home-page-index.css') }}"
+		href="{{ asset('amadeo/css-wt/home-page-index.css') }}"
 	>
 	<link 
 		rel="stylesheet" 
@@ -28,31 +28,11 @@
 @section('body-content')
 	<div id="navigasi">
 		<div id="nav-wrapper">
-			@php
-				$arrName = [
-					'our distillery',
-					'collection',
-					'cocktails',
-					'',
-					'events & articles',
-					'where to find',
-					'contact us'
-				];
-				$arrUrl = [
-					'#our-distillery',
-					'#collection',
-					'#cocktails',
-					'#banner',
-					'#event-articel',
-					'#footer',
-					'#footer'
-				];
-			@endphp
 			@for($i=0; $i<=6; $i++)
 			<div class="nav-content">
-				<a href="{{ $arrUrl[$i] }}" class="{{ $i == 3 ? 'title' : '' }}" >
+				<a href="{{ $NavTarget[$i] }}" class="{{ $i == 3 ? 'title' : '' }}" >
 				@if($i != 3)
-					{{ $arrName[$i] }}
+					{{ $navTitle[$i] }}
 				@elseif($i == 3)
 					<img src="{{ asset('amadeo/image/logo.png') }}">
 				@endif
@@ -101,7 +81,7 @@
 				</div>
 			</div>
 			<div class="content">
-				<img id="img-display" class="animation-element-scroller" src="{{ asset('amadeo/image/prod-drum-whisky.png') }}">
+				<img id="img-display" class="animation-element-scroller" src="{{ asset('amadeo/image/prod-wt-drum.png') }}">
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -109,38 +89,21 @@
 
 	<div id="collection" class="style-two setup-wrapper">
 		<div class="wrapper-display">
-			@php
-				$arrNama = [
-					'Iceland Vodka',
-					'Drum Green Label',
-					'Drum Label'
-				];
-				$arrPic = [
-					'prod-iceland',
-					'prod-drum-whisky',
-					'prod-drum'
-				];
-				$arrBg = [
-					'bg-proud-iceland',
-					'home-banner',
-					'style-one-bg'
-				];
-			@endphp
 			@for($i=0; $i<=2; $i++)
-			<div id="{{ $arrPic[$i] }}" class="collection bg-img {{ $i == 0 ? 'active' : '' }}" style="background-image: url('{{ asset('amadeo/image/'.$arrBg[$i].'.jpg') }}');">
+			<div id="{{ $collectionPic[$i] }}" class="collection bg-img {{ $i == 0 ? 'active' : '' }}" style="background-image: url('{{ asset('amadeo/image/bg-proud-iceland.jpg') }}');">
 				<div class="content text-center">
 					<img 
 						class="img-display animation-element-scroller" 
-						src="{{ asset('amadeo/image/'.$arrPic[$i].'.png') }}"
+						src="{{ asset('amadeo/image/'.$collectionPic[$i].'.png') }}"
 					>
 				</div>
 				<div class="content">
 					<div class="content-decrip">
 						<h1 class="title animation-element-scroller">our collection</h1>
 						<div class="description animation-element-scroller">
-							<h2 class="name">{{ $arrNama[$i] }}</h2>
+							<h2 class="name">{{ $collectionNama[$i] }}</h2>
 							<p>
-								Made From the best Quality of grains which growth in Bali - Indonesia. Water as a main ingredients was taken from pure springs in Bali and Filtrated with charcoal filtration to guarantee the purity of Iceland.
+								{{ $collectionDesc[$i] }}
 							</p>
 						</div>
 						<a href="" class="animation-element-scroller">
@@ -158,12 +121,12 @@
 		</div>
 		<div class="wrapper-display">
 			@for($i=0; $i<=2; $i++)
-			<div class="collection list-display {{ $i == 0 ? 'active' : '' }}" data-target="{{ $arrPic[$i] }}">
+			<div class="collection list-display {{ $i == 0 ? 'active' : '' }}" data-target="{{ $collectionPic[$i] }}">
 				<div class="midle text-center">
-					<img class="img-display animation-element-scroller" src="{{ asset('amadeo/image/'.$arrPic[$i].'.png') }}">
+					<img class="img-display animation-element-scroller" src="{{ asset('amadeo/image/'.$collectionPic[$i].'.png') }}">
 				</div>
 				<div class="midle">
-					<label class="animation-element-scroller">{{ $arrNama[$i] }}</label>
+					<label class="animation-element-scroller">{{ $collectionNama[$i] }}</label>
 				</div>
 			</div>
 			@endfor
@@ -171,22 +134,14 @@
 	</div>
 
 	<div id="cocktails" class="style-three setup-wrapper">
-		@php
-			$arrName = [
-				'screwdriver',
-				'sex on the beach',
-				'cocktail creation',
-				'long island'
-			];
-		@endphp
 		@for($i=0; $i<=3; $i++)
 		<div class="cocktails list-recipe {{ $i == 0 ? 'active' : '' }}">
-			<h1 class="title animation-element-scroller">{{ $arrName[$i] }}</h1>
+			<h1 class="title animation-element-scroller">{{ $cocktailsName[$i] }}</h1>
 			<p class="animation-element-scroller">
 				<a href="">see all recipe</a>
 			</p>
 			<div class="bottom">
-				<img class="img-display animation-element-scroller" src="{{ asset('amadeo/image/rec-'.$i.'.png') }}">
+				<img class="img-display animation-element-scroller" src="{{ asset('amadeo/image/'.$cocktailsImg[$i].'.png') }}">
 			</div>
 			<div class="gradient animation-element-scroller"></div>
 		</div>
@@ -295,5 +250,5 @@
 
 @section('footer-script')
 	<script src="{{ asset('plugin/owl-carousel/owl.carousel.js') }}"></script>
-	<script src="{{ asset('amadeo/js/home-page-index.js') }}"></script>
+	<script src="{{ asset('amadeo/js-wt/home-page-index.js') }}"></script>
 @endsection

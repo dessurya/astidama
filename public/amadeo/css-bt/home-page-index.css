@@ -31,15 +31,36 @@
 		display: table;
 		text-align: center;
 	}
+	#navigasi #nav-wrapper .position.left{
+		display: table;
+		float: left;
+		width: 40%;
+	}
+	#navigasi #nav-wrapper .position.right{
+		display: table;
+		float: right;
+		width: 40%;
+	}
+	#navigasi #nav-wrapper .position.center{
+		display: table;
+		margin: 0 auto;
+		width: 20%;
+	}
+
 	#navigasi #nav-wrapper .nav-content{
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
 		height: 75px;
-		width: 14.28%;
+		width: 33%;
+	}
+	#navigasi #nav-wrapper .nav-content.title{
+		width: 100%;
 	}
 	#navigasi #nav-wrapper .nav-content a{
-		/*margin: 0 15px;*/
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		color: rgb(255,255,255);
@@ -49,8 +70,6 @@
 	#navigasi #nav-wrapper .nav-content a.title img{
 		height: 45px;
 		text-align: center;
-		margin-left: 0;
-		margin-right: 15px;
 	}
 /* navigasi */
 
@@ -183,13 +202,13 @@
 	.style-one #bg-img .content #midle #centered.animation-element-scroller{
 		visibility: hidden;
 		opacity: 0;
-		/*transform: translate(60%);*/
+		transform: translateY(60%);
 		transition: all 2.51s;
 	}
 	.style-one #bg-img .content #midle #centered.animation-element-scroller.in-view{
 		visibility: visible;
 		opacity: 1;
-		/*transform: translate(0);*/
+		transform: translateY(0%);
 	}
 	/*animasi*/
 	.style-one #bg-img .content img#img-display{
@@ -238,7 +257,6 @@
 	.style-two #cover .content #collection-greating-wrapper h1{
 		margin: 0 auto;
 		margin-bottom: 20px;
-		color: rgb(255,255,255);
 	    text-align: center;
 		text-transform: uppercase;
 		font-family: 'Gotham';
@@ -246,7 +264,6 @@
 	    font-weight: lighter;
 	}
 	.style-two #cover .content #collection-greating-wrapper p{
-		color: rgb(255,255,255);
 	    text-align: center;
 	    font-family: 'Gotham';
 	    font-weight: lighter;
@@ -265,7 +282,7 @@
 	.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display{
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position-x: center;
 		width: 100%;
 		height: 45vh;
 	}
@@ -303,6 +320,81 @@
 		font-family: 'Gotham-Black';
 	    font-style:italic;
 	}
+	/* animation */
+		.style-two #cover .content #collection-greating-wrapper h1.animation-element-scroller,
+		.style-two #cover .content #collection-greating-wrapper p.animation-element-scroller{
+			visibility: hidden;
+		    opacity: 0;
+			color: rgba(255,255,255,0);
+		    text-shadow: 
+		    	25px 0px rgba(255,254,254,.8),
+		    	0px 25px rgba(255,254,254,.8),
+		    	-25px 0px rgba(255,254,254,.8),
+		    	0px -25px rgba(255,254,254,.8);
+		    transition: all 4.51s;
+		}
+		.style-two #cover .content #collection-greating-wrapper h1.animation-element-scroller.in-view,
+		.style-two #cover .content #collection-greating-wrapper p.animation-element-scroller.in-view{
+		    visibility: visible;
+		    opacity: 1;
+			color: rgba(255,255,255,1);
+		    text-shadow: 
+		    	0px 0px rgba(255,254,254,.2),
+		    	0px 0px rgba(255,254,254,.2),
+		    	-0px 0px rgba(255,254,254,.2),
+		    	0px -0px rgba(255,254,254,.2);
+		}
+		.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display.animation-element-scroller{
+			background-position-y: 25vh;
+		    transition: all 2.51s;
+		}
+		.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display.animation-element-scroller.in-view{
+			background-position-y: 0vh;
+		}
+		.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display.animation-element-scroller .item-content h2{
+			visibility: hidden;
+		    opacity: 0;
+		    transform: translateY(-10vh);
+		    transition: all 2.51s;
+		}
+		.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display.animation-element-scroller.in-view .item-content h2{
+			visibility: visible;
+		    opacity: 1;
+		    transform: translateY(0);
+		}
+		.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display.animation-element-scroller .item-content p{
+			visibility: hidden;
+		    opacity: 0;
+		    transform: scale(0);
+		    transition: all 2.51s;
+		}
+		.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display.animation-element-scroller.in-view .item-content p{
+			visibility: visible;
+		    opacity: 1;
+		    transform: scale(1);
+		}
+		.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display.animation-element-scroller .item-content a{
+			visibility: hidden;
+			color: rgba(255,255,255,.1);
+		    opacity: 0;
+		    text-shadow: 
+		    	20px 20px rgba(255,254,254,.2),
+		    	20px 20px rgba(255,254,254,.2),
+		    	-20px 20px rgba(255,254,254,.2),
+		    	20px -20px rgba(255,254,254,.2);
+		    transition: all 2.51s;
+		}
+		.style-two #cover .content #collection-list-item-wrapper .list-item-wrapper .img-display.animation-element-scroller.in-view .item-content a{
+			visibility: visible;
+		    opacity: 1;
+		    text-shadow: 
+		    	0px 0px rgba(255,254,254,.2),
+		    	0px 0px rgba(255,254,254,.2),
+		    	-0px 0px rgba(255,254,254,.2),
+		    	0px -0px rgba(255,254,254,.2);
+		}
+		
+	/* animation */
 /* style-two */
 
 /* style-three */
@@ -313,7 +405,6 @@
 	.style-three hr#line{
 		text-align: center;
 		margin: 0 auto;
-		width: 30%;
 	}
 	.style-three h1#title{
 		margin: 0 auto;
@@ -339,7 +430,6 @@
 	.style-three #cocktails-list-recipe .list-recipe .img-display{
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: center bottom;
 		width: 100%;
 		height: 45vh;
 	}
@@ -357,6 +447,83 @@
 		margin-top: 40px;
 		text-align: center;
 	}
+	/* animation */
+		.style-three.animation-element-scroller hr#line{
+			visibility: hidden;
+			opacity: 0;
+			width: 0%;
+			transition: all 4.51s;
+		}
+		.style-three.animation-element-scroller.in-view hr#line{
+			visibility: visible;
+			opacity: 1;
+			width: 30%
+		}
+		.style-three.animation-element-scroller h1#title{
+			visibility: hidden;
+			opacity: 0;
+			text-shadow: 
+				30px -30px rgba(255,255,255,.8),
+				-30px 30px rgba(255,255,255,.8);
+			transition: all 4.51s;
+		}
+		.style-three.animation-element-scroller.in-view h1#title{
+			visibility: visible;
+			opacity: 1;
+			text-shadow: 
+				0px 0px rgba(255,255,255,.1),
+				0px 0px rgba(255,255,255,.1);
+		}
+		.style-three.animation-element-scroller #cocktails-list-recipe .list-recipe:nth-child(odd) .img-display{
+			background-position: -90% bottom;
+			transition: all 4.51s;
+		}
+		.style-three.animation-element-scroller #cocktails-list-recipe .list-recipe:nth-child(even) .img-display{
+			background-position: 90% bottom;
+			transition: all 4.51s;
+		}
+		.style-three.animation-element-scroller.in-view #cocktails-list-recipe .list-recipe .img-display{
+			background-position: center bottom;
+		}
+		.style-three.animation-element-scroller #cocktails-list-recipe .list-recipe:nth-child(odd) h2{
+			visibility: hidden;
+			opacity: 0;
+			text-shadow: 
+				-15px 15px rgba(255,255,255,.8),
+				-30px 30px rgba(255,255,255,.8);
+			transition: all 4.51s;
+		}
+		.style-three.animation-element-scroller #cocktails-list-recipe .list-recipe:nth-child(even) h2{
+			visibility: hidden;
+			opacity: 0;
+			text-shadow: 
+				15px 15px rgba(255,255,255,.8),
+				30px 30px rgba(255,255,255,.8);
+			transition: all 4.51s;
+		}
+		.style-three.animation-element-scroller.in-view #cocktails-list-recipe .list-recipe h2{
+			visibility: visible;
+			opacity: 1;
+			text-shadow: 
+				0px 0px rgba(255,255,255,.1),
+				0px 0px rgba(255,255,255,.1);
+		}
+		.style-three.animation-element-scroller #see-all-btn a.my-btn{
+			visibility: hidden;
+			opacity: 0;
+			padding: 5px 25vw;
+			background-color: rgba(255,255,255,1);
+			color: rgb(0,0,0);
+			transition: all 4.51s;	
+		}
+		.style-three.animation-element-scroller.in-view #see-all-btn a.my-btn{
+			visibility: visible;
+			opacity: 1;
+			padding: 5px 15px;
+			background-color: rgba(255,255,255,0);
+			color: rgb(255,255,255);
+		}
+	/* animation */
 /* style-three */
 
 /* event aticel */
@@ -369,7 +536,7 @@
 		background-color: rgb(0,0,0);
 	}
 	#event-articel #bg h1#title{
-		padding-top: 90px;
+		padding-top: 50px;
 		margin: 0 auto;
 		margin-bottom: 90px;
 		color: rgb(255,254,254);
@@ -466,6 +633,21 @@
 	#event-articel #bg p#all-news-articel{
 		text-align: center;
 		margin-top: 10vh;
+	}
+	#event-articel.animation-element-scroller #bg p#all-news-articel a.my-btn{
+		visibility: hidden;
+		opacity: 0;
+		padding: 5px 25vw;
+		background-color: rgba(255,255,255,1);
+		color: rgb(0,0,0);
+		transition: all 4.51s;	
+	}
+	#event-articel.animation-element-scroller.in-view #bg p#all-news-articel a.my-btn{
+		visibility: visible;
+		opacity: 1;
+		padding: 5px 15px;
+		background-color: rgba(255,255,255,0);
+		color: rgb(255,255,255);
 	}
 /* event aticel */
 

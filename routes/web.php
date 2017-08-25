@@ -15,5 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'Frontend\HomeController@index')
-	->name('frontend.home');
+Route::get('/black-theme', 'Frontend\HomeController@indexBlackTheme')
+	->name('frontend.home.bt');
+Route::get('/white-theme', 'Frontend\HomeController@indexWhiteTheme')
+	->name('frontend.home.wt');
